@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import NavLink from './NavLink';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,9 @@ const Navbar = () => {
 
         
           <div className="hidden md:flex space-x-8 font-medium text-gray-700">
-            <Link href="/" className="hover:text-orange-600 transition">Home</Link>
-            <Link href="/products" className="hover:text-orange-600 transition">Products</Link>
-            <Link href="/profile" className="hover:text-orange-600 transition">My Profile</Link>
+            <NavLink href="/" >Home</NavLink>
+            <NavLink href="/products" >Products</NavLink>
+            <NavLink href="/profile" >My Profile</NavLink>
           </div>
 
          
@@ -63,9 +64,9 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-gray-50 border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link href="/" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">Home</Link>
-            <Link href="/products" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">Products</Link>
-            <Link href="/profile" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">My Profile</Link>
+            <NavLink href="/" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">Home</NavLink>
+            <NavLink href="/products" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">Products</NavLink>
+            <NavLink href="/profile" className="block px-3 py-2 text-gray-700 hover:bg-orange-100 rounded-md">My Profile</NavLink>
           </div>
           
          
