@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=800",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Summer Cotton T-Shirt",
+    "brand": "Suncart Apparel",
+    "price": 25,
+    "rating": 4.8,
+    "stock": 50,
+    "description": "Breathable and lightweight cotton t-shirt for hot summer days.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=500&auto=format&fit=crop",
+    "category": "Apparel"
+  },
+  {
+    
+  "id": 3,
+  "name": "Beach Straw Hat",
+  "brand": "IslandStyle",
+  "price": 20,
+  "rating": 4.5,
+  "stock": 15,
+  "description": "Classic straw hat providing excellent sun protection.",
+  "image": "/hat.jpg",
+  "category": "Accessories"
+
+  },
+  {
+    "id": 4,
+    "name": "Tropical Swim Trunks",
+    "brand": "AquaComfort",
+    "price": 30,
+    "rating": 4.6,
+    "stock": 25,
+    "description": "Quick-dry swim trunks with vibrant tropical prints.",
+    "image": "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?q=80&w=500&auto=format&fit=crop",
+    "category": "Apparel"
+  },
+  {
+    "id": 5,
+    "name": "Sporty Summer Sandals",
+    "brand": "WalkFree",
+    "price": 45,
+    "rating": 4.4,
+    "stock": 12,
+    "description": "Durable and comfortable sandals for summer hiking.",
+    "image": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=500&auto=format&fit=crop",
+    "category": "Footwear"
+  },
+  {
+    "id": 6,
+    "name": "Waterproof Beach Bag",
+    "brand": "BeachVibe",
+    "price": 35,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "Large capacity waterproof bag for all your beach essentials.",
+    "image": "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=500&auto=format&fit=crop",
+    "category": "Accessories"
+  }
+]
