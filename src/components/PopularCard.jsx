@@ -1,5 +1,6 @@
 import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { IoMdStar } from "react-icons/io";
 
 
@@ -31,7 +32,7 @@ const PopularCard = ({p}) => {
             </div>
            </div>
 
-           <Button variant="outline" className={'w-full'}>View Details</Button>
+          <Link href={`/allproduct/${p.id}`}> <Button variant="outline" className={'w-full'}>View Details</Button></Link>
         </Card>
     );
 };
