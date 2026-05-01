@@ -35,7 +35,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link 
-              href="/logout" 
+              href="/register" 
               className="px-4 py-2 text-sm font-semibold text-gray-600 border border-orange-600 rounded-lg hover:bg-orange-600 transition"
             >
              Register Now
@@ -78,7 +78,7 @@ const Navbar = () => {
               Login
             </Link>
             <Link 
-              href="/logout" 
+              href="/register" 
               className="w-full px-4 py-2 text-sm font-semibold text-center text-white bg-orange-600 rounded-lg"
             >
              Register Now 
