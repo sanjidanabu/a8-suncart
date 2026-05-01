@@ -1,4 +1,4 @@
-import { Card, Separator } from "@heroui/react";
+import { Button, Card, Chip, Separator } from "@heroui/react";
 import Image from "next/image";
 import { IoMdStar } from "react-icons/io";
 
@@ -15,6 +15,7 @@ const PopularCard = ({p}) => {
                 className="object-cover rounded-xl"
 
                 />
+                <Chip className="absolute right-2 top-2">{p.category}</Chip>
             </div>
             <div>
                 <h2 className="font-medium">{p.name}</h2>
@@ -29,6 +30,8 @@ const PopularCard = ({p}) => {
                 <p>{p.rating}</p>
             </div>
            </div>
+
+           <Button variant="outline" className={'w-full'}>View Details</Button>
         </Card>
     );
 };
