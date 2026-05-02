@@ -30,17 +30,19 @@ export default function RegisterPage() {
         email,
         password,
         image,
+       
     })
-    console.log(data , error)
+    // console.log(data , error)
 
     if(!error){
-      router.push('/')
+      router.push('/login')
     }
 
     if(error){
       toast.error(error.message || "Registation Failed! Try Again.");
     }else{
       toast.success("Account Created Successfully!");
+      
     }
   };
 
