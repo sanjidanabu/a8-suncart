@@ -28,7 +28,7 @@ export default function LoginPage() {
        callbackURL: '/'
         
     })
-    console.log(data , error)
+    // console.log(data , error)
 
     if(error){
           toast.error(error.message || "Login Failed!");

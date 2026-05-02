@@ -126,7 +126,7 @@ export default function RegisterPage() {
 
        <p className="text-center">Or</p>
       
-            <Button onClick={handlGoogleSignUp} variant="outline" className={'w-full'}><GrGoogle/> Register With Google</Button>
+            <Button onClick={handlGoogleSignUp} variant="outline" className={'w-full'} ><GrGoogle/> Register With Google</Button>
           
     </Card>
   );

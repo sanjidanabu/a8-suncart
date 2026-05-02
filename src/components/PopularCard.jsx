@@ -12,6 +12,7 @@ const PopularCard = ({p}) => {
                 <Image
                 src={p.image}
                 fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 alt="{p.name}"
                 className="object-cover rounded-xl"
 

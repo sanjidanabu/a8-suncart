@@ -3,9 +3,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import NavLink from './NavLink';
+import { authClient } from '@/lib/auth-client';
+import { Avatar, Button } from '@heroui/react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const userData = authClient.useSession()
+  const user = userData.data?.user
+
+
+  const handleSignOut = async () => {
+    await authClient.signOut();
+  }
+  // console.log(user)
 
   return (
     <nav className="bg-white shadow-md w-full sticky top-0 z-50 mb-8">
@@ -26,7 +37,7 @@ const Navbar = () => {
             <NavLink href="/profile" >My Profile</NavLink>
           </div>
 
-         
+         { !user &&
           <div className="hidden md:flex items-center space-x-4">
             <Link 
               href="/login" 
@@ -40,7 +51,21 @@ const Navbar = () => {
             >
              Register Now
             </Link>
-          </div>
+          </div>}
+          {user && (
+            <div className="flex gap-3">
+              <Avatar size="sm">
+                <Avatar.Image
+                  alt="John Doe"
+                  src={user?.image}
+                  referrerPolicy="no-referrer"
+                />
+                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+              </Avatar>
+
+              <Button onClick={handleSignOut} size="sm" variant="danger">LogOut</Button>
+            </div>
+          )}
 
           
           <div className="md:hidden flex items-center">
