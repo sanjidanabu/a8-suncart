@@ -12,8 +12,12 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
+import { toast } from "react-toastify";
 
 export default function RegisterPage() {
+   const router = useRouter()
   const onSubmit = async (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -28,8 +32,26 @@ export default function RegisterPage() {
         image,
     })
     console.log(data , error)
+
+    if(!error){
+      router.push('/')
+    }
+
+    if(error){
+      toast.error(error.message || "Registation Failed! Try Again.");
+    }else{
+      toast.success("Account Created Successfully!");
+    }
   };
 
+
+
+
+      const handlGoogleSignUp = async() => {
+           await authClient.signIn.social({
+             provider: 'google'
+           })
+          }
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Register Now </h1>
@@ -101,6 +123,11 @@ export default function RegisterPage() {
           </Button>
         </div>
       </Form>
+
+       <p className="text-center">Or</p>
+      
+            <Button onClick={handlGoogleSignUp} variant="outline" className={'w-full'}><GrGoogle/> Register With Google</Button>
+          
     </Card>
   );
 }
